@@ -20,6 +20,7 @@ import chromecast from "./chrome-cast.svg";
 import sliders04 from "./sliders-04.svg";
 import loading from "./loading.png";
 import background from "./background.jpg";
+import heroImage from "./hero-education.jpg"
 
 import curve from "./hero/curve.png";
 import logo from "../assets/images/finestlogodark.png";
@@ -170,5 +171,6 @@ export {
   studentsphoto,
   studentsswimming,
   kidsplaying,
-  kipslogo
+  kipslogo,
+  heroImage
 };

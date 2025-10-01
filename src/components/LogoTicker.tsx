@@ -28,7 +28,7 @@ export const LogoTicker=()=>{
 
                 [...tickers,...tickers,...tickers].map((logo,index)=>{
                   return(
-                   <h2 className="text-3xl">{logo}</h2>
+                   <h2 className="text-3xl text-gray-400" key={index}>{logo}</h2>
                   )
                 })
               }
