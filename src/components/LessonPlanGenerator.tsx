@@ -88,7 +88,7 @@ export const LessonPlanGenerator = ({ pdfContent, fileName }: LessonPlanGenerato
         <CardHeader className="bg-gradient-primary text-primary-foreground">
           <CardTitle className="flex items-center space-x-2">
             <BookOpen className="w-5 h-5" />
-            <span>Lesson Plan Generator</span>
+            <span className='text-gray-700'>Lesson Plan Generator</span>
           </CardTitle>
         </CardHeader>
         <CardContent className="p-6 space-y-4">
@@ -156,7 +156,7 @@ export const LessonPlanGenerator = ({ pdfContent, fileName }: LessonPlanGenerato
                 Generating Lesson Plan...
               </>
             ) : (
-              'Generate Lesson Plan'
+              <span className='text-black hover:text-white'>Generate Lesson Plan</span>
             )}
           </Button>
         </CardContent>

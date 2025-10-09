@@ -279,7 +279,7 @@ export const ExamGenerator = ({ pdfContent, fileName }: ExamGeneratorProps) => {
                 Generating Exam...
               </>
             ) : (
-              'Generate Exam'
+              <span className='text-gray-700 hover:text-white'>Generate Exam</span>
             )}
           </Button>
         </CardContent>
