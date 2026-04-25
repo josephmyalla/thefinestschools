@@ -1,7 +1,11 @@
 import { notification1 } from "../assets";
 import { notificationImages } from "../constants";
 
-const Notification = ({ className, title }) => {
+interface Props {
+  className?:any,
+  title?:string
+}
+const Notification = ({ className, title }:Props) => {
   return (
     <div
       className={`${
@@ -42,5 +46,4 @@ const Notification = ({ className, title }) => {
     </div>
   );
 };
-
 export default Notification;

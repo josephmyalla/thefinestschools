@@ -49,12 +49,12 @@ export const navigation = [
     url: "/admissions",
     ispublic: true
   },
-  {
-   id: "1",
-    title: "Academics",
-    url: "/academics",
-    ispublic: true
-  },
+  // {
+  //  id: "1",
+  //   title: "Academics",
+  //   url: "/academics",
+  //   ispublic: true
+  // },
   {
     id: "2",
     title: "Sports",
@@ -74,13 +74,13 @@ export const navigation = [
     onlyMobile: true,
     ispublic: true
   },
-  {
-    id: "5",
-    title: "Sign in",
-    url: "#login",
-    onlyMobile: true,
-    ispublic: true
-  },
+  // {
+  //   id: "5",
+  //   title: "Sign in",
+  //   url: "#login",
+  //   onlyMobile: true,
+  //   ispublic: true
+  // },
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
@@ -203,7 +203,7 @@ export const pricing = [
   },
   {
     id: "2",
-    title: "Grace I,VII",
+    title: "Grade I,VII",
     description: "School transport is provided and is charged based on the distance from home to school",
     price: "950,000.00",
     features: [
@@ -289,17 +289,17 @@ export const socials = [
 export const quicklinks = [
  {
     id: "0",
-    title: "Wizara ya Elimu, Sayansi na Teknolojia",
+    linktitle: "Wizara ya Elimu, Sayansi na Teknolojia",
     url: "https://www.moe.go.tz"
   },
     {
     id: "1",
-    title: "Ofisi ya Rais Tawala za Mikoa na Serikali za Mtaa",
+    linktitle: "Ofisi ya Rais Tawala za Mikoa na Serikali za Mtaa",
     url: "https://tamisemi.go.tz"
   },
    {
     id: "2",
-    title: "The National Council for Technical and Vocational Education and Training",
+    linktitle: "The National Council for Technical and Vocational Education and Training",
     url: "https://www.nactvet.go.tz"
   }
 ];
@@ -308,12 +308,12 @@ export const partnerschools = [
   
  {
     id: "0",
-    title: "Kips Anex Msangani Pr School",
+    linktitle: "Kips Anex Msangani Pr School",
     url: "/#"
   },
     {
     id: "1",
-    title: "Maryland Primary School",
+    linktitle: "Maryland Primary School",
     url: "/#"
   }
 ];
@@ -326,7 +326,7 @@ export const applicationsteps =[
     title:"Submit online or download application form .",
     steps:[
       "The application form will introduce your family to the Finest Schools.",
-      "Once your application form has been submitted, your will be given payment instructions.",
+      "Once your application form has been submitted, you will be given payment instructions.",
       "Our school has a rolling admission throughout the year. However, students applying for Grades 4-6 must enroll at the start of year (January)."
     ]
   },

@@ -9,7 +9,13 @@ import {
 
 import Generating from "./Generating";
 
-const Image =({w,h,imageUrl})=>{
+type Props ={
+  h?:number,
+  w?:number,
+  imageUrl?:string
+}
+
+const Image =({w,h,imageUrl}:Props)=>{
   return(
     <img
     className="object-cover md:object-right rounded-md"

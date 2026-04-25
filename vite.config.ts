@@ -6,6 +6,6 @@ import flowbiteReact from "flowbite-react/plugin/vite";
 export default defineConfig({
   plugins: [react(), flowbiteReact()],
   server: {
-        port: 3000, // Set your desired port here
+        port: 3005, // Set your desired port here
   },
 })

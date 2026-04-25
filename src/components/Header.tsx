@@ -65,9 +65,9 @@ const Header = () => {
        
         </nav>
       
-        <Button className="hidden lg:flex" href="#login" px="" white="">
+        {/* <Button className="hidden lg:flex" href="#login" px="" white="">
           Sign in
-        </Button>
+        </Button> */}
 
         <Button
           className="ml-auto lg:hidden"

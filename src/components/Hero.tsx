@@ -1,17 +1,17 @@
 import { curve, heroBackground, robot,finestpicha } from "../assets";
 import Button from "./Button";
 import Section from "./Section";
-import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
+import { BottomLine, Gradient } from "./design/Hero";
 import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
+import ButtonSvg from "../assets/svg/ButtonSvg";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
-
   return (
     <Section
       className="pt-[12rem] -mt-[5.25rem]"
@@ -20,12 +20,11 @@ const Hero = () => {
       customPaddings
       id="hero"
     >
-      
-      <div className="container relative" ref={parallaxRef}>
+    <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h1 mb-6 hero-title">
          The Finest Pre & Primary School
-            <span className="inline-block relative hidden md:inline-block">
+            <span className="inline-block relative md:inline-block">
             Welcome{" "}
               <img
                 src={curve}
@@ -41,9 +40,10 @@ const Hero = () => {
          
           </p>
          
-          <Button href="/pricing" white>
-            Join Now
-          </Button>
+          <a className="w-[120px] button relative cursor-pointer inline-flex items-center justify-center h-11 transition-colors text-n-1 hover:text-color-1" href="/applicationform">
+          Join Now
+          {ButtonSvg("")}
+        </a>
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
@@ -94,10 +94,9 @@ const Hero = () => {
             />
           </div>
 
-          <BackgroundCircles />
         </div>
 
-        <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
+        <CompanyLogos />
       </div>
 
       <BottomLine />

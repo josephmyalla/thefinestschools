@@ -1,29 +1,43 @@
+
 // Import React and its hooks for component state and lifecycle management
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, FormEvent, ChangeEvent } from 'react'
 // Import Font Awesome icons for the chat interface
 import { FaRobot, FaPaperPlane, FaTimes, FaCommentDots } from 'react-icons/fa'
 
+// Interface for individual message structure
+interface Message {
+  text: string
+  isAgent: boolean
+  threadId?: string
+}
+
+// Interface for API response structure
+interface ApiResponse {
+  response: string
+  threadId: string
+}
+
 // Main chat widget component
-const ChatWidget = () => {
+const ChatWidget: React.FC = () => {
   // State to track if chat window is open or closed
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
   // State to store all chat messages (array of message objects)
-  const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState<Message[]>([])
   // State to track current input field value
-  const [inputValue, setInputValue] = useState('')
+  const [inputValue, setInputValue] = useState<string>('')
   // State to store conversation thread ID (null for new conversations)
-  const [threadId, setThreadId] = useState(null)
+  const [threadId, setThreadId] = useState<string | null>(null)
   // Ref to reference the bottom of messages container for auto-scrolling
-  const messagesEndRef = useRef(null)
+  const messagesEndRef = useRef<HTMLDivElement>(null)
 
   // Effect hook: Show initial greeting when chat is first opened
   useEffect(() => {
     // Only run if chat is open AND no messages exist yet
     if (isOpen && messages.length === 0) {
       // Create initial greeting message
-      const initialMessages = [
+      const initialMessages: Message[] = [
         {
-          text: "Hello! Welcome to the Finest Schools. How can I help you today?", // Greeting text
+          text: "Hello! I'm your school assistant. How can I help you today?", // Greeting text
           isAgent: true // Flag to indicate this is from the AI agent
         }
       ]
@@ -39,13 +53,13 @@ const ChatWidget = () => {
   }, [messages]) // Dependency: re-run whenever messages array changes
 
   // Function to toggle chat window open/closed
-  const toggleChat = () => {
+  const toggleChat = (): void => {
     // Flip the current isOpen state (true becomes false, false becomes true)
     setIsOpen(!isOpen)
   }
 
   // Function to handle changes in the input field
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>): void => {
     // Update inputValue state with current text field value
     setInputValue(e.target.value)
   }
@@ -54,14 +68,14 @@ const ChatWidget = () => {
   console.log(messages)
   
   // Function to send user message and get AI response
-  const handleSendMessage = async (e) => {
+  const handleSendMessage = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     // Prevent default form submission behavior (page refresh)
     e.preventDefault()
     // Log user input for debugging
     console.log(inputValue)
 
     // Create message object for user's input
-    const message = {
+    const message: Message = {
       text: inputValue,  // User's typed message
       isAgent: false,    // Flag indicating this is from user, not AI
     }
@@ -93,12 +107,12 @@ const ChatWidget = () => {
       }
 
       // Parse JSON response from server
-      const data = await response.json()
+      const data: ApiResponse = await response.json()
       // Log successful response for debugging
       console.log('Success:', data)
       
       // Create message object for AI agent's response
-      const agentResponse = {
+      const agentResponse: Message = {
         text: data.response,    // AI's response text
         isAgent: true,          // Flag indicating this is from AI agent
         threadId: data.threadId // Thread ID for conversation continuity
@@ -170,9 +184,11 @@ const ChatWidget = () => {
               type="submit"                         // Submit form when clicked
               className="send-button"               // CSS class for styling
               disabled={inputValue.trim() === ''}   // Disable if input is empty or whitespace
+              onClick={()=>simulateChatApiResponse(inputValue)}
             >
               {/* Paper plane icon for send button */}
               <FaPaperPlane size={16} />
+
             </button>
           </form>
         </>
@@ -189,3 +205,48 @@ const ChatWidget = () => {
 
 // Export component as default export
 export default ChatWidget
+
+
+
+async function simulateChatApiResponse(userMessage:string) {
+  // Simulate network delay (800ms–2s)
+  const delay = (ms:any) => new Promise((resolve) => setTimeout(resolve, ms));
+  const randomDelay = Math.floor(Math.random() * 1200) + 800;
+
+  const mockResponses = [
+    "Thanks for reaching out! How can I help you further?",
+    "That's a great question. Let me look into that for you.",
+    "I understand your concern. Here's what I suggest...",
+    "Got it! I'll get back to you with more details shortly.",
+  ];
+
+  try {
+    // Show a loading/typing state before resolving
+    console.log("Bot is typing...");
+    await delay(randomDelay);
+
+    // Simulate occasional API failure (10% chance)
+    if (Math.random() < 0.1) {
+      throw new Error("API request failed. Please try again.");
+    }
+
+    // Pick a random mock response
+    const botReply =
+      mockResponses[Math.floor(Math.random() * mockResponses.length)];
+
+    return {
+      success: true,
+      data: {
+        id: crypto.randomUUID(),
+        userMessage,
+        botReply,
+        timestamp: new Date().toISOString(),
+      },
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: "there is an error try again latter",
+    };
+  }
+}

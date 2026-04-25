@@ -257,6 +257,8 @@
   border-radius: 20px;
   outline: none;
   font-size: 14px;
+  color:black;
+  background-color: gainsboro
 }
 
 .message-input:focus {

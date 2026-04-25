@@ -3,27 +3,7 @@ import Section from "./Section";
 import Contacts from "./Contacts"
 import { socials as items,quicklinks,partnerschools } from "../constants";
 import Socials from './Socials'
-
-
-
-
-const QuickLinks =({items,title})=>{
-  return(
-  <>
-  <h3 className="text-lg font-semibold mb-4 text-gray-200">{title}</h3>
-            <ul className="space-y-2">
-             {
-              items.map((item)=>
-                (
-                  
-                  <li key={item.id} ><Link to={item.url} className="text-gray-300 hover:text-white transition-colors text-xs">{item.title}</Link></li>
-             
-                )
-              )
-             }
-          </ul>
-    </>)
-}
+import QuickLinks from "./QuckLinks"
 
 const Footer = () => {
   return (
@@ -36,20 +16,46 @@ const Footer = () => {
              <p className="text-gray-300 mt-2 mb-4 max-w-md text-xs text-sm/5">
              Pre and Primary School Located in Mkuza, Kibaha. The school starts with Baby class, Middle, Pre and Primary School from 2.5yrs  old age and above.
             </p>
-            <div className="flex space-x-4">
-                <Socials items={items}/>  
+            <div className="flex space-x-2">
+                {
+                  items.map((item)=>
+                    (
+                      <Socials {...item}/>  
+                    )
+                  )
+                }
             </div>
           </div>
           
           {/* Quick Links */}
           <div>
-            <QuickLinks items={quicklinks} title="Quick Links"/>
+            <h3 className="text-lg font-semibold mb-4 text-gray-200">Quick Links</h3>
+            
+
+            <div className="flex flex-col items-left justify-center space-y-2 text-lg">
+                {
+                  quicklinks.map((qlink)=>
+                    (
+                      <QuickLinks {...qlink}/>  
+                    )
+                  )
+                }
+            </div>
+
           </div>
           
           {/* Topics */}
           <div>
-           
-             <QuickLinks items={partnerschools} title="Partner Schools" />
+            <h3 className="text-lg font-semibold mb-4 text-gray-200">Partner Schools</h3>
+            <div className="flex flex-col items-left justify-center space-y-2 text-lg">
+                {
+                  partnerschools.map((qlink)=>
+                    (
+                      <QuickLinks {...qlink}/>  
+                    )
+                  )
+                }
+            </div>
 
           </div>
           

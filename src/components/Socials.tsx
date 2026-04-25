@@ -1,17 +1,27 @@
-const  Socials =({items})=>{
+type SocialProps = {
+  
+      id?: string,
+      title?: string,
+      iconUrl?: any,
+      url?: string
+    
+}
 
+
+const  Socials =(item:SocialProps)=>{
+   const {id,url,title,iconUrl} = item
    return(
     <ul className="flex gap-5 flex-wrap">
-              {items.map((item) => (
+                
                 <a
-                  key={item.id}
-                  href={item.url}
+                  key={id}
+                  href={url}
                   target="_blank"
                   className="flex items-center justify-center w-10 h-10 bg-n-7 rounded-full transition-colors hover:bg-n-6"
                 >
-                  <img src={item.iconUrl} width={16} height={16} alt={item.title} />
+                  <img src={iconUrl} width={16} height={16} alt={title} />
                 </a>
-              ))}
+              
         </ul>
    )
 }

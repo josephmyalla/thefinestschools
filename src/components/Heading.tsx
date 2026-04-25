@@ -1,10 +1,10 @@
 import TagLine from "./Tagline";
 
 type Headingrops = {
-  className:string
-  title:string
-  text:any
-  tag:any
+  className?:string
+  title?:string
+  text?:any
+  tag?:any
 }
 
 
