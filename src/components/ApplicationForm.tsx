@@ -428,12 +428,8 @@ If you have any questions, please contact the Admissions Office (admissions@fine
             </div>
             {/* Submit button*/}
 
-          <div className="flex justify-between mt-6">
-            <div className="space-x-2">
-            <Button variant="outline" onClick={handleStudentSave}>
-              Save Draft
-            </Button>
-           </div>
+          <div className="flex justify-center mt-6">
+           
            <Button onClick={handleStudentSubmit}>Submit</Button>
         </div>
 
