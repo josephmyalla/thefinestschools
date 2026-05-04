@@ -40,7 +40,7 @@ const Hero = () => {
          
           </p>
          
-          <a className="w-[120px] button relative cursor-pointer inline-flex items-center justify-center h-11 transition-colors text-n-1 hover:text-color-1" href="/applicationform">
+          <a className="w-[120px] button relative cursor-pointer inline-flex items-center justify-center h-11 transition-colors text-n-1 hover:text-color-1" href="/admissions">
           Join Now
           {ButtonSvg("")}
         </a>
