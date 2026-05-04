@@ -1,4 +1,3 @@
-import { check } from "../assets";
 import { applicationsteps } from "../constants";
 
 

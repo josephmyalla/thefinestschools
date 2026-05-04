@@ -13,14 +13,14 @@ const Footer = () => {
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Logo and About */}
           <div className="lg:col-span-2">
-             <p className="text-gray-300 mt-2 mb-4 max-w-md text-xs text-sm/5">
+             <p className="text-gray-300 mt-2 mb-4 max-w-md text-sm/5">
              Pre and Primary School Located in Mkuza, Kibaha. The school starts with Baby class, Middle, Pre and Primary School from 2.5yrs  old age and above.
             </p>
             <div className="flex space-x-2">
                 {
-                  items.map((item)=>
+                  items.map((item,index)=>
                     (
-                      <Socials {...item}/>  
+                      <Socials {...item} key={index}/>  
                     )
                   )
                 }
@@ -34,9 +34,9 @@ const Footer = () => {
 
             <div className="flex flex-col items-left justify-center space-y-2 text-lg">
                 {
-                  quicklinks.map((qlink)=>
+                  quicklinks.map((qlink,index)=>
                     (
-                      <QuickLinks {...qlink}/>  
+                      <QuickLinks {...qlink} key={index}/>  
                     )
                   )
                 }
@@ -49,9 +49,9 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-gray-200">Partner Schools</h3>
             <div className="flex flex-col items-left justify-center space-y-2 text-lg">
                 {
-                  partnerschools.map((qlink)=>
+                  partnerschools.map((qlink,index)=>
                     (
-                      <QuickLinks {...qlink}/>  
+                      <QuickLinks {...qlink} key={index}/>  
                     )
                   )
                 }

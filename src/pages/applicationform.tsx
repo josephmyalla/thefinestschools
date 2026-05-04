@@ -2,7 +2,7 @@ import ButtonGradient from "../assets/svg/ButtonGradient";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ApplicationMultiForm from "../components/ApplicationForm"
-
+import Admissions from "../components/ApplicationForm"
 
 
 const ApplicationForm = ()=>{
@@ -14,7 +14,7 @@ const ApplicationForm = ()=>{
 
         <div className="m-10">
             <h2 className="text-5xl section-title">Application</h2>
-            <ApplicationMultiForm />
+            <Admissions />
         </div>
         
         <Footer />

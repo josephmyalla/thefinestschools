@@ -1,28 +1,16 @@
 import {
   studentsphoto1,
   benefitIcon1,
-  benefitIcon2,
-  benefitIcon3,
-  benefitIcon4,
-  benefitImage2,
   chromecast,
   disc02,
-  discord,
-  discordBlack,
   facebook,
-  figma,
   file02,
-  framer,
   homeSmile,
   instagram,
   notification2,
   notification3,
   notification4,
-  notion,
-  photoshop,
   plusSquare,
-  protopie,
-  raindrop,
   recording01,
   recording03,
   roadmap1,
@@ -30,15 +18,12 @@ import {
   roadmap3,
   roadmap4,
   searchMd,
-  slack,
   sliders04,
   learningIcon,
   admissionIcon,
   feesIcon,
   sportsIcon,
   collaborationIcon,
-  twitter,
-  yourlogo,
   kipslogo,
 } from "../assets";
 
@@ -280,7 +265,7 @@ export const socials = [
     id: "1",
     title: "Facebook",
     iconUrl: facebook,
-    url: "https://www.instagram.com/thefinestschools_tz"
+    url: "https://www.facebook.com/thefinestschools_tz"
   }
 ];
 
@@ -323,7 +308,7 @@ export const applicationsteps =[
     id:0,
     step:"STEP 1",
     image:"",
-    title:"Submit online or download application form .",
+    title:"Fill an online application form and download for signing.",
     steps:[
       "The application form will introduce your family to the Finest Schools.",
       "Once your application form has been submitted, you will be given payment instructions.",

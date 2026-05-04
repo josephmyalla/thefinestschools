@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Pricing from "../components/Pricing";
-import ChatWidget from "../components/ChatWidget";
 import Sports from "../components/Sports";
 
 
@@ -21,7 +20,6 @@ const Index = () => {
         <Pricing />
         <Footer />
       </div>
-      <ChatWidget />
       <ButtonGradient />
     </>
   );
