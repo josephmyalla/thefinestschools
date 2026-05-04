@@ -428,9 +428,9 @@ If you have any questions, please contact the Admissions Office (admissions@fine
             </div>
             {/* Submit button*/}
 
-          <div className="flex justify-center mt-6">
+          <div className="flex items-center justify-center mt-6">
            
-           <Button onClick={handleStudentSubmit}>Submit</Button>
+           <Button onClick={handleStudentSubmit} className="hover:bg-blue-950/50">Submit</Button>
         </div>
 
       </div>
