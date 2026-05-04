@@ -49,7 +49,7 @@ const initialFormState = {
 
 export default function ApplicationMultiForm() {
 
-const [formStudentData, setFormStudentData] = useState(initialFormState);
+  const [formStudentData, setFormStudentData] = useState(initialFormState);
 
   const [dateOfiBrth, setDateOfBirth]=useState<Date | any>(undefined);
 	const handleChange = (dateOfiBrth:any) => {
@@ -129,13 +129,6 @@ If you have any questions, please contact the Admissions Office (admissions@fine
       
       <div>
     
-             <div className="flex flex-col row-gap-2 mt-8">
-              <InputFile />
-              <p className="text-[12px] mb-4 mt-4">This field is Required and cannot be left blank.</p>
-              <div className="p-4 bg-n-6 rounded-md md:block">
-                <p className="text-[14px] text-gray-400 leading-loose">Photos will be attached to the application form. Please ensure the photo is up to date, featuring only the main subject of the photo, and is on a plain background.</p>
-              </div>
-            </div>
             <div>
               <p className="text-[12px]">Student’s Name (As it appears on passport or birth certificate.)</p>
               <Label>First Name</Label>
