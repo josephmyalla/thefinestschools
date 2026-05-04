@@ -80,6 +80,14 @@ import benefitIcon3 from "./benefits/icon-3.svg";
 import benefitIcon4 from "./benefits/icon-4.svg";
 import benefitImage2 from "./benefits/image-2.png";
 
+import thefinestusafiri1 from './transport/thefinestusafiri1.jpeg'
+import thefinestusafiri2 from './transport/thefinestusafiri2.jpeg'
+import thefinestusafiri3 from './transport/thefinestusafiri3.jpeg'
+
+import awards1 from './awards/thefinestusafiripongezi1.jpeg'
+import awards2 from './awards/thefinestusafiripongezi2.jpeg'
+import awards3 from './awards/thefinestusafiripongezi3.jpeg'
+
 import discordBlack from "./socials/discord.svg";
 import facebook from "./socials/facebook.svg";
 import instagram from "./socials/instagram.svg";
@@ -172,5 +180,12 @@ export {
   studentsswimming,
   kidsplaying,
   kipslogo,
-  heroImage
+  heroImage,
+  thefinestusafiri1,
+  thefinestusafiri2,
+  thefinestusafiri3,
+  awards1,
+  awards2,
+  awards3
+
 };

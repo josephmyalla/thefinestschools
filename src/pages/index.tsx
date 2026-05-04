@@ -6,7 +6,8 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Pricing from "../components/Pricing";
 import Sports from "../components/Sports";
-
+import Awards from "../components/Awards"
+import Transport from "../components/Transport";
 
 const Index = () => {
   return (
@@ -14,10 +15,12 @@ const Index = () => {
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden bg-n-8">
         <Header />
         <Hero />
+        <Awards/>
         <Benefits />
         <Collaboration />
         <Sports />
         <Pricing />
+        <Transport/>
         <Footer />
       </div>
       <ButtonGradient />
