@@ -17,9 +17,8 @@ const dateformat = (dateinput:string)=>{
 
 export async function addFormData(studentData:StudentData) {
     try{
-       console.log(dateformat(studentData.dateofbirth))
+     
        await formArray.push({formStudentData:studentData})
-       //console.log({...studentData})
        const childnames=`${studentData.firstname} ${studentData.middlename} ${studentData.lastname}`.toUpperCase()
        const gender = `${studentData.gender}`.toUpperCase()
        const nationality = `${studentData.nationality}`.toUpperCase()
